@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   ScrollView,
@@ -14,7 +14,10 @@ import {
   Text,
   useColorScheme,
   View,
+  Alert,
+  Platform,
 } from 'react-native';
+import ReactNativeBiometrics from 'react-native-biometrics';
 
 import {
   Colors,
@@ -56,10 +59,91 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    const checkBiometrics = async () => {
+      try {
+        // Initialize biometrics with platform-specific options
+        const rnBiometrics = new ReactNativeBiometrics({
+          allowDeviceCredentials: true,
+          ...(Platform.OS === 'ios'
+            ? {
+                promptMessage: 'Authenticate to continue',
+                fallbackLabel: 'Use Passcode',
+              }
+            : {}),
+        });
+
+        if (!rnBiometrics) {
+          throw new Error('Failed to initialize biometrics');
+        }
+
+        const {available, biometryType, error} =
+          await rnBiometrics.isSensorAvailable();
+        console.log(
+          'Biometrics available:',
+          available,
+          'Type:',
+          biometryType,
+          'Error:',
+          error,
+        );
+
+        if (available) {
+          const {success, error} = await rnBiometrics.simplePrompt({
+            promptMessage: `Authenticate with ${biometryType}`,
+            cancelButtonText: 'Cancel',
+          });
+
+          console.log('Authentication result:', success, 'Error:', error);
+
+          if (success) {
+            setIsAuthenticated(true);
+            setAuthError(null);
+          } else {
+            setAuthError(error || 'Authentication failed');
+            Alert.alert('Authentication failed', error || 'Please try again');
+          }
+        } else {
+          const errorMessage = error || 'Biometrics not available';
+          setAuthError(errorMessage);
+          Alert.alert(
+            'Biometrics not available',
+            'Please set up biometric authentication on your device',
+          );
+        }
+      } catch (error) {
+        console.error('Biometrics error:', error);
+        const errorMessage =
+          error instanceof Error
+            ? error.message
+            : 'Failed to authenticate with biometrics';
+        setAuthError(errorMessage);
+        Alert.alert('Error', errorMessage);
+      }
+    };
+
+    checkBiometrics();
+  }, []);
+
+  if (!isAuthenticated) {
+    return (
+      <View style={[backgroundStyle, styles.container]}>
+        <Text style={styles.authText}>Please authenticate to continue...</Text>
+        {authError && (
+          <Text style={[styles.authText, styles.errorText]}>
+            Error: {authError}
+          </Text>
+        )}
+      </View>
+    );
+  }
 
   /*
    * To keep the template simple and small we're adding padding to prevent view
@@ -78,10 +162,9 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        style={backgroundStyle}>
+      <ScrollView style={backgroundStyle}>
         <View style={{paddingRight: safePadding}}>
-          <Header/>
+          <Header />
         </View>
         <View
           style={{
@@ -125,6 +208,20 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  authText: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  errorText: {
+    color: 'red',
+    fontSize: 14,
   },
 });
 
