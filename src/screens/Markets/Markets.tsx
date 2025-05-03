@@ -32,7 +32,8 @@ const CryptoTabbedView = () => {
           42000, 43500, 42800, 41900, 44000, 45200, 47000, 48500, 47800, 49200,
           50100,
         ],
-        iconUrl: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
+        iconUrl:
+          'https://cdn.pixabay.com/photo/2017/03/12/02/57/bitcoin-2136339_640.png',
         color: '#cdff00',
       },
       {
@@ -43,7 +44,8 @@ const CryptoTabbedView = () => {
         chartData: [
           2800, 2750, 2900, 3000, 2950, 3100, 3200, 3150, 3300, 3450, 3520,
         ],
-        iconUrl: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+        iconUrl:
+          'https://static1.tokenterminal.com//ethereum/logo.png?logo_hash=fd8f54cab23f8f4980041f4e74607cac0c7ab880',
         color: '#627EEA',
       },
       {
@@ -54,7 +56,8 @@ const CryptoTabbedView = () => {
         chartData: [
           2800, 2750, 2900, 3000, 2950, 3100, 3200, 3150, 3300, 3450, 3520,
         ],
-        iconUrl: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+        iconUrl:
+          'https://static1.tokenterminal.com//ethereum/logo.png?logo_hash=fd8f54cab23f8f4980041f4e74607cac0c7ab880',
         color: '#627EEA',
       },
       {
@@ -65,7 +68,8 @@ const CryptoTabbedView = () => {
         chartData: [
           2800, 2750, 2900, 3000, 2950, 3100, 3200, 3150, 3300, 3450, 3520,
         ],
-        iconUrl: 'https://cryptologos.cc/logos/ethereum-eth-logo.png',
+        iconUrl:
+          'https://static1.tokenterminal.com//ethereum/logo.png?logo_hash=fd8f54cab23f8f4980041f4e74607cac0c7ab880',
         color: '#627EEA',
       },
     ],
@@ -76,7 +80,8 @@ const CryptoTabbedView = () => {
         price: 159234.23,
         priceChangePercent: 8.76,
         chartData: [160, 162, 165, 168, 170, 172, 171, 173, 175, 177, 178],
-        iconUrl: 'https://cryptologos.cc/logos/solana-sol-logo.png',
+        iconUrl:
+          'https://s3.coinmarketcap.com/static-gravity/image/5cc0b99a8dd84fbfa4e150d84b5531f2.png',
         color: '#14F195',
       },
       {
@@ -85,7 +90,8 @@ const CryptoTabbedView = () => {
         price: 159234.23,
         priceChangePercent: 7.23,
         chartData: [38, 39, 38.5, 40, 41, 40.5, 41.5, 42, 42.5, 42.8, 42.9],
-        iconUrl: 'https://cryptologos.cc/logos/avalanche-avax-logo.png',
+        iconUrl:
+          'https://upload.wikimedia.org/wikipedia/en/0/03/Avalanche_logo_without_text.png',
         color: '#E84142',
       },
     ],
@@ -96,7 +102,8 @@ const CryptoTabbedView = () => {
         price: 159234.23,
         priceChangePercent: -5.42,
         chartData: [650, 645, 640, 635, 630, 625, 620, 615, 610, 605, 599],
-        iconUrl: 'https://cryptologos.cc/logos/bnb-bnb-logo.png',
+        iconUrl:
+          'https://public.bnbstatic.com/20190405/eb2349c3-b2f8-4a93-a286-8f86a62ea9d8.png',
         color: '#F3BA2F',
       },
       {
@@ -107,7 +114,8 @@ const CryptoTabbedView = () => {
         chartData: [
           0.62, 0.615, 0.61, 0.605, 0.6, 0.595, 0.59, 0.585, 0.58, 0.575, 0.58,
         ],
-        iconUrl: 'https://cryptologos.cc/logos/cardano-ada-logo.png',
+        iconUrl:
+          'https://static1.tokenterminal.com//cardano/logo.png?logo_hash=b65ff508cd8e2188d6ac5e7ec92e90be28f0eb77',
         color: '#0033AD',
       },
     ],

@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     marginLeft: 12,
+    gap: 5,
   },
   symbol: {
     color: '#FFFFFF',
