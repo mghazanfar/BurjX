@@ -5,101 +5,107 @@ import {
   TouchableOpacity,
   StyleSheet,
   StatusBar,
+  ImageBackground,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import image from '../../../assets/BG.png';
 
 export const CoinDetails = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.parentContainer}>
-      <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="light-content" />
+    <View style={{paddingBottom: 67, flex: 1, backgroundColor: 'black'}}>
+      <ImageBackground
+        source={image}
+        style={styles.backgroundImage}
+        resizeMode="repeat">
+        <View style={styles.parentContainer}>
+          <SafeAreaView style={styles.container}>
+            <StatusBar barStyle="light-content" />
 
-        {/* Header with back button and title */}
-        <View style={styles.header}>
-          <TouchableOpacity
-            style={styles.backButton}
-            onPress={() => navigation.goBack()}>
-            <Text style={styles.backButtonText}>←</Text>
-          </TouchableOpacity>
+            {/* Header with back button and title */}
+            <View style={styles.header}>
+              <TouchableOpacity
+                style={styles.backButton}
+                onPress={() => navigation.goBack()}>
+                <Text style={styles.backButtonText}>←</Text>
+              </TouchableOpacity>
 
-          <View style={styles.titleContainer}>
-            {/* Bitcoin logo rendered as a simple component */}
-            <View style={styles.bitcoinLogo}>
-              <Text style={styles.bitcoinSymbol}>₿</Text>
+              <View style={styles.titleContainer}>
+                {/* Bitcoin logo rendered as a simple component */}
+                <View style={styles.bitcoinLogo}>
+                  <Text style={styles.bitcoinSymbol}>₿</Text>
+                </View>
+                <Text style={styles.title}>Bitcoin (BTC)</Text>
+              </View>
             </View>
-            <Text style={styles.title}>Bitcoin (BTC)</Text>
-          </View>
+
+            {/* Price information */}
+            <View style={styles.priceContainer}>
+              <Text style={styles.priceText}>$ 148,385.52</Text>
+              <View style={styles.percentageContainer}>
+                <Text style={styles.percentageText}>+ 5.42 %</Text>
+              </View>
+            </View>
+
+            {/* Chart placeholder */}
+            <View style={styles.chartPlaceholder}>
+              {/* Chart will be implemented later */}
+              <View style={styles.priceIndicator}>
+                <Text style={styles.indicatorText}>$ 148k</Text>
+              </View>
+            </View>
+
+            {/* Time period selector */}
+            <View style={styles.timeSelector}>
+              <TouchableOpacity
+                style={[styles.timeButton, styles.activeTimeButton]}>
+                <Text
+                  style={[styles.timeButtonText, styles.activeTimeButtonText]}>
+                  1H
+                </Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.timeButton}>
+                <Text style={styles.timeButtonText}>1D</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.timeButton}>
+                <Text style={styles.timeButtonText}>1W</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.timeButton}>
+                <Text style={styles.timeButtonText}>1M</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.timeButton}>
+                <Text style={styles.timeButtonText}>1Y</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.timeButton}>
+                <Text style={styles.timeButtonText}>ALL</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.expandButton}>
+                <Text style={styles.expandButtonText}>↗</Text>
+              </TouchableOpacity>
+            </View>
+          </SafeAreaView>
         </View>
-
-        {/* Price information */}
-        <View style={styles.priceContainer}>
-          <Text style={styles.priceText}>$ 148,385.52</Text>
-          <View style={styles.percentageContainer}>
-            <Text style={styles.percentageText}>+ 5.42 %</Text>
-          </View>
-        </View>
-
-        {/* Chart placeholder */}
-        <View style={styles.chartPlaceholder}>
-          {/* Chart will be implemented later */}
-          <View style={styles.priceIndicator}>
-            <Text style={styles.indicatorText}>$ 148k</Text>
-          </View>
-        </View>
-
-        {/* Time period selector */}
-        <View style={styles.timeSelector}>
-          <TouchableOpacity
-            style={[styles.timeButton, styles.activeTimeButton]}>
-            <Text style={[styles.timeButtonText, styles.activeTimeButtonText]}>
-              1H
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.timeButton}>
-            <Text style={styles.timeButtonText}>1D</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.timeButton}>
-            <Text style={styles.timeButtonText}>1W</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.timeButton}>
-            <Text style={styles.timeButtonText}>1M</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.timeButton}>
-            <Text style={styles.timeButtonText}>1Y</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.timeButton}>
-            <Text style={styles.timeButtonText}>ALL</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.expandButton}>
-            <Text style={styles.expandButtonText}>↗</Text>
-          </TouchableOpacity>
-        </View>
-
-        {/* Home indicator */}
-        <View style={styles.homeIndicator}>
-          <View style={styles.homeIndicatorBar} />
-        </View>
-      </SafeAreaView>
+      </ImageBackground>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+  },
   parentContainer: {
     flex: 1,
-    backgroundColor: '#121212',
   },
   container: {
     flex: 1,
-    backgroundColor: '#121212',
     paddingTop: 20,
   },
   header: {
@@ -129,7 +135,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#F7931A', // Bitcoin orange color
+    backgroundColor: '#F7931A',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 10,
