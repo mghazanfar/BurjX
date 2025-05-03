@@ -1,5 +1,6 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {LineChart} from 'react-native-chart-kit';
 
 interface CoinCardProps {
@@ -21,6 +22,7 @@ export const CoinCard = ({
   iconUrl,
   color = '#cdff00', // Default to neon green if no color provided
 }: CoinCardProps) => {
+  const navigation = useNavigation<any>();
   // Format price with commas and 2 decimal places
   const formattedPrice = price.toLocaleString('en-US', {
     minimumFractionDigits: 2,
@@ -31,7 +33,9 @@ export const CoinCard = ({
   const isPositive = priceChangePercent >= 0;
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('CoinDetails')}>
       {/* Coin Info */}
       <View style={styles.coinInfoContainer}>
         <View style={styles.headerContainer}>
@@ -108,7 +112,7 @@ export const CoinCard = ({
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -41,6 +41,7 @@ export const AllCoins = ({coins}: any) => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    paddingBottom: 70,
   },
   headerContainer: {
     flexDirection: 'row',
