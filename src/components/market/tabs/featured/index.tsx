@@ -67,6 +67,9 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     paddingVertical: 20,
+    flexDirection: 'row',
+    gap: 4,
+    overflow: 'scroll',
   },
 });
 

@@ -60,7 +60,7 @@ export const CryptoCard = ({
               },
             ],
           }}
-          width={180}
+          width={148}
           height={80}
           withDots={false}
           withInnerLines={false}
@@ -71,9 +71,9 @@ export const CryptoCard = ({
           withHorizontalLines={false}
           withVerticalLines={false}
           chartConfig={{
-            backgroundColor: 'transparent',
-            backgroundGradientFrom: 'transparent',
-            backgroundGradientTo: 'transparent',
+            backgroundColor: '#171717',
+            backgroundGradientFrom: '#171717',
+            backgroundGradientTo: '#171717',
             decimalPlaces: 0,
             color: () => color,
             style: {
@@ -93,7 +93,7 @@ export const CryptoCard = ({
       {/* Price Info */}
       <View style={styles.priceContainer}>
         <Text style={styles.price}>$ {formattedPrice}</Text>
-        <View style={[styles.percentContainer, {backgroundColor: '#222222'}]}>
+        <View style={[styles.percentContainer, {backgroundColor: '#232323'}]}>
           <Text
             style={[
               styles.percentText,
@@ -110,14 +110,14 @@ export const CryptoCard = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#222222',
+    backgroundColor: '#171717',
     borderRadius: 20,
-    padding: 16,
-    alignSelf: 'center',
-    marginVertical: 10,
-    width: 180,
+    padding: 20,
+    justifyContent: 'center',
     borderColor: '#333333',
     borderWidth: 1,
+    gap: 22,
+    minWidth: 180,
   },
   headerContainer: {
     flexDirection: 'row',
@@ -146,7 +146,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 5,
-    width: 180,
     backgroundColor: 'transparent',
   },
   chart: {
@@ -158,20 +157,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 5,
+    gap: 8,
   },
   price: {
     color: '#FFFFFF',
-    fontSize: 22,
+    fontSize: 16,
     fontWeight: 'bold',
   },
   percentContainer: {
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderRadius: 12,
+    paddingHorizontal: 3,
+    paddingVertical: 2.5,
+    borderRadius: 6,
   },
   percentText: {
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: 'bold',
   },
 });
