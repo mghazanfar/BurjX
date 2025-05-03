@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
-  Alert,
   SafeAreaView,
   StatusBar,
   Image,
@@ -47,7 +45,7 @@ const BiometricSetup = () => {
           });
 
           if (success) {
-            navigation.navigate('Details');
+            navigation.navigate('Markets');
           }
         } catch (error) {
           // If we get an error here, it means biometrics are not enrolled
@@ -126,6 +124,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     color: '#000000',
+    fontFamily: 'Lufga-Regular',
   },
   homeIndicator: {
     width: 134,
