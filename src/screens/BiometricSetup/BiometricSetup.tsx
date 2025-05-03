@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -23,40 +23,39 @@ type BiometricSetupScreenNavigationProp = NativeStackNavigationProp<
 >;
 
 const BiometricSetup = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const navigation = useNavigation<BiometricSetupScreenNavigationProp>();
 
-  const handleSetupBiometrics = async () => {
-    setIsLoading(true);
+  useEffect(() => {
+    checkBiometricStatus();
+  }, []);
+
+  const checkBiometricStatus = async () => {
     try {
       const rnBiometrics = new ReactNativeBiometrics({
         allowDeviceCredentials: true,
       });
 
-      const {available, biometryType, error} =
-        await rnBiometrics.isSensorAvailable();
+      // Check if biometrics are available on the device
+      const {available, biometryType} = await rnBiometrics.isSensorAvailable();
 
       if (available) {
-        const {success, error} = await rnBiometrics.simplePrompt({
-          promptMessage: `Authenticate with ${biometryType}`,
-          cancelButtonText: 'Cancel',
-        });
+        // Try to authenticate to check if biometrics are enrolled
+        try {
+          const {success} = await rnBiometrics.simplePrompt({
+            promptMessage: `Authenticate with ${biometryType}`,
+            cancelButtonText: 'Cancel',
+          });
 
-        if (success) {
-          navigation.navigate('Details');
-        } else {
-          Alert.alert('Authentication failed', error || 'Please try again');
+          if (success) {
+            navigation.navigate('Details');
+          }
+        } catch (error) {
+          // If we get an error here, it means biometrics are not enrolled
+          console.log('Initial authentication error:', error);
         }
-      } else {
-        Alert.alert(
-          'Biometrics not available',
-          'Please set up biometric authentication on your device',
-        );
       }
     } catch (error) {
-      Alert.alert('Error', 'Failed to authenticate with biometrics');
-    } finally {
-      setIsLoading(false);
+      console.error('Error checking biometric status:', error);
     }
   };
 
@@ -80,13 +79,6 @@ const BiometricSetup = () => {
           resizeMethod="resize"
         />
       </View>
-
-      {/* Set Up Button */}
-      <TouchableOpacity
-        style={styles.setupButton}
-        onPress={handleSetupBiometrics}>
-        <Text style={styles.setupButtonText}>Set Up</Text>
-      </TouchableOpacity>
     </SafeAreaView>
   );
 };
