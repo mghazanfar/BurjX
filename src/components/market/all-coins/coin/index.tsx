@@ -33,12 +33,7 @@ export const CoinCard = ({
   return (
     <View style={styles.container}>
       {/* Coin Info */}
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
-        }}>
+      <View style={styles.coinInfoContainer}>
         <View style={styles.headerContainer}>
           <Image
             source={{uri: iconUrl}}
@@ -67,8 +62,6 @@ export const CoinCard = ({
       </View>
 
       {/* Chart */}
-
-      {/* Price Info */}
       <View style={styles.priceContainer}>
         <View>
           <Text style={styles.price}>$ {formattedPrice}</Text>
@@ -126,6 +119,11 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: 'center',
     minWidth: 180,
+  },
+  coinInfoContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
   },
   headerContainer: {
     flexDirection: 'row',
