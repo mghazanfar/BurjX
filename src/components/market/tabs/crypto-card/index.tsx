@@ -29,6 +29,7 @@ export const CryptoCard = ({
 
   // Determine if price change is positive or negative
   const isPositive = priceChangePercent >= 0;
+  const chartColor = isPositive ? '#CDFF00' : '#FF3440';
 
   return (
     <View style={styles.container}>
@@ -75,7 +76,7 @@ export const CryptoCard = ({
             backgroundGradientFrom: '#171717',
             backgroundGradientTo: '#171717',
             decimalPlaces: 0,
-            color: () => color,
+            color: () => chartColor,
             style: {
               borderRadius: 16,
             },
@@ -84,6 +85,7 @@ export const CryptoCard = ({
             },
             fillShadowGradient: 'transparent',
             fillShadowGradientOpacity: 0,
+            strokeWidth: 1.5,
           }}
           bezier
           style={styles.chart}
@@ -97,7 +99,7 @@ export const CryptoCard = ({
           <Text
             style={[
               styles.percentText,
-              {color: isPositive ? color : '#FF4D4D'},
+              {color: isPositive ? '#CDFF00' : '#FF3440'},
             ]}>
             {isPositive ? '+ ' : '- '}
             {Math.abs(priceChangePercent).toFixed(2)} %
