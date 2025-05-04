@@ -30,8 +30,8 @@ export const AllCoins = ({coins}: any) => {
         </View>
       </View>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        {coins?.map(coin => (
-          <CoinCard {...coin} />
+        {coins?.map((coin, index) => (
+          <CoinCard {...coin} key={index} />
         ))}
       </ScrollView>
     </View>
