@@ -1,3 +1,24 @@
+#!/bin/bash
+
+# Exit on error
+set -e
+
+# Create output directory
+mkdir -p ios/BurjX/Images.xcassets/AppIcon.appiconset
+
+# Convert jpeg to png
+magick assets/burjx_logo.jpeg ios/BurjX/Images.xcassets/AppIcon.appiconset/icon.png
+
+# Generate different sizes
+sizes=(20 29 40 58 60 76 80 87 120 152 167 180 1024)
+
+for size in "${sizes[@]}"
+do
+  magick ios/BurjX/Images.xcassets/AppIcon.appiconset/icon.png -resize ${size}x${size} ios/BurjX/Images.xcassets/AppIcon.appiconset/icon-${size}.png
+done
+
+# Create Contents.json
+cat > ios/BurjX/Images.xcassets/AppIcon.appiconset/Contents.json << EOF
 {
   "images" : [
     {
@@ -114,3 +135,8 @@
     "author" : "xcode"
   }
 }
+EOF
+
+# Set proper permissions
+chmod 644 ios/BurjX/Images.xcassets/AppIcon.appiconset/*.png
+chmod 644 ios/BurjX/Images.xcassets/AppIcon.appiconset/Contents.json 
