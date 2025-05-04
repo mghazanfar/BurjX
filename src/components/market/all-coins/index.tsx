@@ -76,7 +76,7 @@ export const AllCoins = () => {
                 iconUrl={coin.image}
               />
             ))}
-            {loading && coins.length > 0 && (
+            {loading && (
               <View style={styles.loadingMoreContainer}>
                 <ActivityIndicator size="small" color="#cdff00" />
               </View>
@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
   scrollContainer: {
     gap: 2,
     marginTop: 16,
+    position: 'relative',
   },
   loadingContainer: {
     flex: 1,
@@ -140,6 +141,11 @@ const styles = StyleSheet.create({
   loadingMoreContainer: {
     padding: 10,
     alignItems: 'center',
+    height: 200,
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
   },
   errorContainer: {
     flex: 1,
