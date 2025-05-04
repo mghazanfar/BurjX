@@ -18,7 +18,7 @@ export const CoinDetails = () => {
       <ImageBackground
         source={image}
         style={styles.backgroundImage}
-        resizeMode="repeat">
+        resizeMode="cover">
         <View style={styles.parentContainer}>
           <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" />
