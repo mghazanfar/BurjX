@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Image,
   ScrollView,
-  Text,
   TextInput,
   View,
   StyleSheet,
@@ -11,6 +10,7 @@ import {
 } from 'react-native';
 import {CoinCard} from './coin';
 import {useAllCoins} from '../../../hooks/useAllCoins';
+import {Text} from '../../common/Text';
 
 export const AllCoins = () => {
   const {coins, loading, error, hasMore, refreshing, loadMore, onRefresh} =

@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import {
   View,
-  Text,
   StyleSheet,
   SafeAreaView,
   StatusBar,
@@ -12,6 +11,7 @@ import ReactNativeBiometrics from 'react-native-biometrics';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../navigation/AppNavigator';
+import {Text} from '../../components/common/Text';
 
 const {width, height} = Dimensions.get('window');
 
@@ -100,7 +100,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#FFFFFF',
     lineHeight: 50,
-    fontFamily: 'Lufga',
   },
   fingerprintContainer: {
     width: 300,

@@ -1,7 +1,8 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import {LineChart} from 'react-native-chart-kit';
+import {Text} from '../../../common/Text';
 
 interface CoinCardProps {
   symbol: string; // e.g., "BTC"

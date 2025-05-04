@@ -7,60 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C80B921A6F3F58F76C31292 /* libPods-BurjX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-BurjX.a */; };
+		0195BF1505225A6D992E97F4 /* libPods-BurjX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC00EB727C2E52C71AA2868 /* libPods-BurjX.a */; };
+		0A43F0D0B6BC4581B59245D6 /* LufgaMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 379D53E62F884579A7B58718 /* LufgaMediumItalic.ttf */; };
 		1212B225B5901D68497C5F30 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		1F10F981FC8B4B869E830373 /* LufgaExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB1974E9C26F49828A54271D /* LufgaExtraLight.ttf */; };
+		2171AEE59C6B4F57A804AFB9 /* LufgaBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7111C0EAEE05479F8E202EEC /* LufgaBoldItalic.ttf */; };
+		386C83FE85E5466EA1CDD101 /* LufgaSemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FE3E7AF24C2415B8AAB1DF3 /* LufgaSemiBoldItalic.ttf */; };
+		436E942547BB439F80A95324 /* LufgaThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A98ABB0316400BB16FA594 /* LufgaThin.ttf */; };
+		4A57590C93294542A63A14DB /* LufgaLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 413E4A6F950E42E999584011 /* LufgaLightItalic.ttf */; };
+		4D9734A2581C41B69FBD2FFD /* LufgaSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AD4DC49E93B4347862D2B4B /* LufgaSemiBold.ttf */; };
+		56377A368BEA470CA33CEF0A /* LufgaItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE6327AAA0624703824E455D /* LufgaItalic.ttf */; };
+		5BC8E9A9C9BC41E892099075 /* LufgaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5CBE084FF5344D3399879BB3 /* LufgaBold.ttf */; };
+		5DFE6C42AFF0421A9C6316BF /* LufgaExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7613F91BCD304189B43A360B /* LufgaExtraLightItalic.ttf */; };
+		5E8144C1D7954ECB90F55AA9 /* LufgaBlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8D151158A364246BE1ADB3B /* LufgaBlackItalic.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		0CC57F6F49424C0C857F203B /* LufgaBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C95C10846B54F4DBA7B7F9B /* LufgaBlack.ttf */; };
-		0EFEB0AD170D4AA79AD09B68 /* LufgaBlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2989EDCAF8D4CC8AE623B27 /* LufgaBlackItalic.ttf */; };
-		51581AE6849944CAA26F985B /* LufgaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBF58A0487D4E30B912E7EA /* LufgaBold.ttf */; };
-		08586D0B14314604A47195CD /* LufgaBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E10488BBBF840AD8B38AA0B /* LufgaBoldItalic.ttf */; };
-		34BCB01EFB8B471FB3B0DA9E /* LufgaExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 137CDC7BA185477A97A6F1DC /* LufgaExtraBold.ttf */; };
-		3CDD08BF40FB4962B0B84117 /* LufgaExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2CF547234ADD83FA6CA4 /* LufgaExtraBoldItalic.ttf */; };
-		E58D4FE8E35F4F99910A311A /* LufgaExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36816D5FCAD94969B987DA74 /* LufgaExtraLight.ttf */; };
-		55ABF224F45C4EF2BBC45461 /* LufgaExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D05826364B34B70A4A01B25 /* LufgaExtraLightItalic.ttf */; };
-		8AA1B40C99814B28BDDD904A /* LufgaItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28351348C1CC4BEF88180BCA /* LufgaItalic.ttf */; };
-		3D3FD719A94D4B599055E79E /* LufgaLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1139CEB5ABD8497D9BCECA29 /* LufgaLight.ttf */; };
-		0BD59E234D104A3B9DE5A347 /* LufgaLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675A5BC2BDE442EDB81DF87E /* LufgaLightItalic.ttf */; };
-		9968F323CA614469BA44AADE /* LufgaMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168F9558E6F748E295AF1268 /* LufgaMedium.ttf */; };
-		B810477425D240A1B97B47D8 /* LufgaMediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 512955A23AC94794A8E3275F /* LufgaMediumItalic.ttf */; };
-		C3ABA5BCFEBD4981B0C0E12B /* LufgaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8871CB1F31124E9C9A31B565 /* LufgaRegular.ttf */; };
-		08041CEAC9BC46D6B2BE33C1 /* LufgaSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8140758DD2948879E5A933C /* LufgaSemiBold.ttf */; };
-		7A8D860820E047F6A6E0EDCB /* LufgaSemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69368C21C5B04BB0AC7B20E9 /* LufgaSemiBoldItalic.ttf */; };
-		D360C349CC6C409A8083D4E5 /* LufgaThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AB384F6865949F8AE394037 /* LufgaThin.ttf */; };
-		952E866B75B24339A32CF0D9 /* LufgaThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BDEAFDA809C453B9EB811B2 /* LufgaThinItalic.ttf */; };
+		A889360B0EDB43B79DB4A038 /* LufgaThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D8B647A50C1492993BAC950 /* LufgaThinItalic.ttf */; };
+		AA4A8075CB0248C488FAFA1B /* LufgaExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 018E67CAB1B54BDEA4519B72 /* LufgaExtraBoldItalic.ttf */; };
+		C59F56E2A9FB4BF58D58492E /* LufgaBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC66DD73D48416AB0998F6C /* LufgaBlack.ttf */; };
+		CA8A6075533D414BB2C23F63 /* LufgaExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A57B306C22D248D0A20A2E21 /* LufgaExtraBold.ttf */; };
+		CDC27DC40D25402BA20F60BA /* LufgaLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C8ECBC16F4AEA911AE185 /* LufgaLight.ttf */; };
+		CDF662067F574D848F412543 /* LufgaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E784CC1E54864BFBAA191082 /* LufgaRegular.ttf */; };
+		DF155DE6E7A74E5B86736FA4 /* LufgaMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48C5CC10B4E94E5F88AD1775 /* LufgaMedium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		018E67CAB1B54BDEA4519B72 /* LufgaExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaExtraBoldItalic.ttf; path = ../assets/fonts/Lufga/LufgaExtraBoldItalic.ttf; sourceTree = "<group>"; };
+		0FE3E7AF24C2415B8AAB1DF3 /* LufgaSemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaSemiBoldItalic.ttf; path = ../assets/fonts/Lufga/LufgaSemiBoldItalic.ttf; sourceTree = "<group>"; };
+		12A98ABB0316400BB16FA594 /* LufgaThin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaThin.ttf; path = ../assets/fonts/Lufga/LufgaThin.ttf; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BurjX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BurjX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BurjX/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BurjX/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = BurjX/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-BurjX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurjX.debug.xcconfig"; path = "Target Support Files/Pods-BurjX/Pods-BurjX.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-BurjX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurjX.release.xcconfig"; path = "Target Support Files/Pods-BurjX/Pods-BurjX.release.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-BurjX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BurjX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A1C8ECBC16F4AEA911AE185 /* LufgaLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaLight.ttf; path = ../assets/fonts/Lufga/LufgaLight.ttf; sourceTree = "<group>"; };
+		2FC66DD73D48416AB0998F6C /* LufgaBlack.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaBlack.ttf; path = ../assets/fonts/Lufga/LufgaBlack.ttf; sourceTree = "<group>"; };
+		31E9FF208F21086BD80A3CFA /* Pods-BurjX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurjX.debug.xcconfig"; path = "Target Support Files/Pods-BurjX/Pods-BurjX.debug.xcconfig"; sourceTree = "<group>"; };
+		379D53E62F884579A7B58718 /* LufgaMediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaMediumItalic.ttf; path = ../assets/fonts/Lufga/LufgaMediumItalic.ttf; sourceTree = "<group>"; };
+		413E4A6F950E42E999584011 /* LufgaLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaLightItalic.ttf; path = ../assets/fonts/Lufga/LufgaLightItalic.ttf; sourceTree = "<group>"; };
+		48C5CC10B4E94E5F88AD1775 /* LufgaMedium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaMedium.ttf; path = ../assets/fonts/Lufga/LufgaMedium.ttf; sourceTree = "<group>"; };
+		4BC00EB727C2E52C71AA2868 /* libPods-BurjX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BurjX.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBE084FF5344D3399879BB3 /* LufgaBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaBold.ttf; path = ../assets/fonts/Lufga/LufgaBold.ttf; sourceTree = "<group>"; };
+		7111C0EAEE05479F8E202EEC /* LufgaBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaBoldItalic.ttf; path = ../assets/fonts/Lufga/LufgaBoldItalic.ttf; sourceTree = "<group>"; };
+		7613F91BCD304189B43A360B /* LufgaExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaExtraLightItalic.ttf; path = ../assets/fonts/Lufga/LufgaExtraLightItalic.ttf; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BurjX/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BurjX/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8AD4DC49E93B4347862D2B4B /* LufgaSemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaSemiBold.ttf; path = ../assets/fonts/Lufga/LufgaSemiBold.ttf; sourceTree = "<group>"; };
+		9D8B647A50C1492993BAC950 /* LufgaThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaThinItalic.ttf; path = ../assets/fonts/Lufga/LufgaThinItalic.ttf; sourceTree = "<group>"; };
+		A57B306C22D248D0A20A2E21 /* LufgaExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaExtraBold.ttf; path = ../assets/fonts/Lufga/LufgaExtraBold.ttf; sourceTree = "<group>"; };
+		AB1974E9C26F49828A54271D /* LufgaExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaExtraLight.ttf; path = ../assets/fonts/Lufga/LufgaExtraLight.ttf; sourceTree = "<group>"; };
+		AE6327AAA0624703824E455D /* LufgaItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaItalic.ttf; path = ../assets/fonts/Lufga/LufgaItalic.ttf; sourceTree = "<group>"; };
+		B8D151158A364246BE1ADB3B /* LufgaBlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaBlackItalic.ttf; path = ../assets/fonts/Lufga/LufgaBlackItalic.ttf; sourceTree = "<group>"; };
+		DBC2E870D21D6DB94FBCEF1C /* Pods-BurjX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BurjX.release.xcconfig"; path = "Target Support Files/Pods-BurjX/Pods-BurjX.release.xcconfig"; sourceTree = "<group>"; };
+		E784CC1E54864BFBAA191082 /* LufgaRegular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = LufgaRegular.ttf; path = ../assets/fonts/Lufga/LufgaRegular.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		8C95C10846B54F4DBA7B7F9B /* LufgaBlack.ttf */ = {isa = PBXFileReference; name = "LufgaBlack.ttf"; path = "../assets/fonts/LufgaBlack.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E2989EDCAF8D4CC8AE623B27 /* LufgaBlackItalic.ttf */ = {isa = PBXFileReference; name = "LufgaBlackItalic.ttf"; path = "../assets/fonts/LufgaBlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2FBF58A0487D4E30B912E7EA /* LufgaBold.ttf */ = {isa = PBXFileReference; name = "LufgaBold.ttf"; path = "../assets/fonts/LufgaBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7E10488BBBF840AD8B38AA0B /* LufgaBoldItalic.ttf */ = {isa = PBXFileReference; name = "LufgaBoldItalic.ttf"; path = "../assets/fonts/LufgaBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		137CDC7BA185477A97A6F1DC /* LufgaExtraBold.ttf */ = {isa = PBXFileReference; name = "LufgaExtraBold.ttf"; path = "../assets/fonts/LufgaExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CD3B2CF547234ADD83FA6CA4 /* LufgaExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "LufgaExtraBoldItalic.ttf"; path = "../assets/fonts/LufgaExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		36816D5FCAD94969B987DA74 /* LufgaExtraLight.ttf */ = {isa = PBXFileReference; name = "LufgaExtraLight.ttf"; path = "../assets/fonts/LufgaExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7D05826364B34B70A4A01B25 /* LufgaExtraLightItalic.ttf */ = {isa = PBXFileReference; name = "LufgaExtraLightItalic.ttf"; path = "../assets/fonts/LufgaExtraLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		28351348C1CC4BEF88180BCA /* LufgaItalic.ttf */ = {isa = PBXFileReference; name = "LufgaItalic.ttf"; path = "../assets/fonts/LufgaItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1139CEB5ABD8497D9BCECA29 /* LufgaLight.ttf */ = {isa = PBXFileReference; name = "LufgaLight.ttf"; path = "../assets/fonts/LufgaLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		675A5BC2BDE442EDB81DF87E /* LufgaLightItalic.ttf */ = {isa = PBXFileReference; name = "LufgaLightItalic.ttf"; path = "../assets/fonts/LufgaLightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		168F9558E6F748E295AF1268 /* LufgaMedium.ttf */ = {isa = PBXFileReference; name = "LufgaMedium.ttf"; path = "../assets/fonts/LufgaMedium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		512955A23AC94794A8E3275F /* LufgaMediumItalic.ttf */ = {isa = PBXFileReference; name = "LufgaMediumItalic.ttf"; path = "../assets/fonts/LufgaMediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8871CB1F31124E9C9A31B565 /* LufgaRegular.ttf */ = {isa = PBXFileReference; name = "LufgaRegular.ttf"; path = "../assets/fonts/LufgaRegular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A8140758DD2948879E5A933C /* LufgaSemiBold.ttf */ = {isa = PBXFileReference; name = "LufgaSemiBold.ttf"; path = "../assets/fonts/LufgaSemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		69368C21C5B04BB0AC7B20E9 /* LufgaSemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "LufgaSemiBoldItalic.ttf"; path = "../assets/fonts/LufgaSemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1AB384F6865949F8AE394037 /* LufgaThin.ttf */ = {isa = PBXFileReference; name = "LufgaThin.ttf"; path = "../assets/fonts/LufgaThin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5BDEAFDA809C453B9EB811B2 /* LufgaThinItalic.ttf */ = {isa = PBXFileReference; name = "LufgaThinItalic.ttf"; path = "../assets/fonts/LufgaThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-BurjX.a in Frameworks */,
+				0195BF1505225A6D992E97F4 /* libPods-BurjX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-BurjX.a */,
+				4BC00EB727C2E52C71AA2868 /* libPods-BurjX.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,40 +126,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A1B2290D2B1545579B48487A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2FC66DD73D48416AB0998F6C /* LufgaBlack.ttf */,
+				B8D151158A364246BE1ADB3B /* LufgaBlackItalic.ttf */,
+				5CBE084FF5344D3399879BB3 /* LufgaBold.ttf */,
+				7111C0EAEE05479F8E202EEC /* LufgaBoldItalic.ttf */,
+				A57B306C22D248D0A20A2E21 /* LufgaExtraBold.ttf */,
+				018E67CAB1B54BDEA4519B72 /* LufgaExtraBoldItalic.ttf */,
+				AB1974E9C26F49828A54271D /* LufgaExtraLight.ttf */,
+				7613F91BCD304189B43A360B /* LufgaExtraLightItalic.ttf */,
+				AE6327AAA0624703824E455D /* LufgaItalic.ttf */,
+				1A1C8ECBC16F4AEA911AE185 /* LufgaLight.ttf */,
+				413E4A6F950E42E999584011 /* LufgaLightItalic.ttf */,
+				48C5CC10B4E94E5F88AD1775 /* LufgaMedium.ttf */,
+				379D53E62F884579A7B58718 /* LufgaMediumItalic.ttf */,
+				E784CC1E54864BFBAA191082 /* LufgaRegular.ttf */,
+				8AD4DC49E93B4347862D2B4B /* LufgaSemiBold.ttf */,
+				0FE3E7AF24C2415B8AAB1DF3 /* LufgaSemiBoldItalic.ttf */,
+				12A98ABB0316400BB16FA594 /* LufgaThin.ttf */,
+				9D8B647A50C1492993BAC950 /* LufgaThinItalic.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-BurjX.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-BurjX.release.xcconfig */,
+				31E9FF208F21086BD80A3CFA /* Pods-BurjX.debug.xcconfig */,
+				DBC2E870D21D6DB94FBCEF1C /* Pods-BurjX.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		A1B2290D2B1545579B48487A /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				8C95C10846B54F4DBA7B7F9B /* LufgaBlack.ttf */,
-				E2989EDCAF8D4CC8AE623B27 /* LufgaBlackItalic.ttf */,
-				2FBF58A0487D4E30B912E7EA /* LufgaBold.ttf */,
-				7E10488BBBF840AD8B38AA0B /* LufgaBoldItalic.ttf */,
-				137CDC7BA185477A97A6F1DC /* LufgaExtraBold.ttf */,
-				CD3B2CF547234ADD83FA6CA4 /* LufgaExtraBoldItalic.ttf */,
-				36816D5FCAD94969B987DA74 /* LufgaExtraLight.ttf */,
-				7D05826364B34B70A4A01B25 /* LufgaExtraLightItalic.ttf */,
-				28351348C1CC4BEF88180BCA /* LufgaItalic.ttf */,
-				1139CEB5ABD8497D9BCECA29 /* LufgaLight.ttf */,
-				675A5BC2BDE442EDB81DF87E /* LufgaLightItalic.ttf */,
-				168F9558E6F748E295AF1268 /* LufgaMedium.ttf */,
-				512955A23AC94794A8E3275F /* LufgaMediumItalic.ttf */,
-				8871CB1F31124E9C9A31B565 /* LufgaRegular.ttf */,
-				A8140758DD2948879E5A933C /* LufgaSemiBold.ttf */,
-				69368C21C5B04BB0AC7B20E9 /* LufgaSemiBoldItalic.ttf */,
-				1AB384F6865949F8AE394037 /* LufgaThin.ttf */,
-				5BDEAFDA809C453B9EB811B2 /* LufgaThinItalic.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -168,13 +168,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BurjX" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				71274EB8EEC58ABF56D8309B /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				95B26CF8E524D8FD4C4DD828 /* [CP] Embed Pods Frameworks */,
+				9100E012AB06B64BF0A1E632 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,24 +224,24 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				1212B225B5901D68497C5F30 /* PrivacyInfo.xcprivacy in Resources */,
-				0CC57F6F49424C0C857F203B /* LufgaBlack.ttf in Resources */,
-				0EFEB0AD170D4AA79AD09B68 /* LufgaBlackItalic.ttf in Resources */,
-				51581AE6849944CAA26F985B /* LufgaBold.ttf in Resources */,
-				08586D0B14314604A47195CD /* LufgaBoldItalic.ttf in Resources */,
-				34BCB01EFB8B471FB3B0DA9E /* LufgaExtraBold.ttf in Resources */,
-				3CDD08BF40FB4962B0B84117 /* LufgaExtraBoldItalic.ttf in Resources */,
-				E58D4FE8E35F4F99910A311A /* LufgaExtraLight.ttf in Resources */,
-				55ABF224F45C4EF2BBC45461 /* LufgaExtraLightItalic.ttf in Resources */,
-				8AA1B40C99814B28BDDD904A /* LufgaItalic.ttf in Resources */,
-				3D3FD719A94D4B599055E79E /* LufgaLight.ttf in Resources */,
-				0BD59E234D104A3B9DE5A347 /* LufgaLightItalic.ttf in Resources */,
-				9968F323CA614469BA44AADE /* LufgaMedium.ttf in Resources */,
-				B810477425D240A1B97B47D8 /* LufgaMediumItalic.ttf in Resources */,
-				C3ABA5BCFEBD4981B0C0E12B /* LufgaRegular.ttf in Resources */,
-				08041CEAC9BC46D6B2BE33C1 /* LufgaSemiBold.ttf in Resources */,
-				7A8D860820E047F6A6E0EDCB /* LufgaSemiBoldItalic.ttf in Resources */,
-				D360C349CC6C409A8083D4E5 /* LufgaThin.ttf in Resources */,
-				952E866B75B24339A32CF0D9 /* LufgaThinItalic.ttf in Resources */,
+				C59F56E2A9FB4BF58D58492E /* LufgaBlack.ttf in Resources */,
+				5E8144C1D7954ECB90F55AA9 /* LufgaBlackItalic.ttf in Resources */,
+				5BC8E9A9C9BC41E892099075 /* LufgaBold.ttf in Resources */,
+				2171AEE59C6B4F57A804AFB9 /* LufgaBoldItalic.ttf in Resources */,
+				CA8A6075533D414BB2C23F63 /* LufgaExtraBold.ttf in Resources */,
+				AA4A8075CB0248C488FAFA1B /* LufgaExtraBoldItalic.ttf in Resources */,
+				1F10F981FC8B4B869E830373 /* LufgaExtraLight.ttf in Resources */,
+				5DFE6C42AFF0421A9C6316BF /* LufgaExtraLightItalic.ttf in Resources */,
+				56377A368BEA470CA33CEF0A /* LufgaItalic.ttf in Resources */,
+				CDC27DC40D25402BA20F60BA /* LufgaLight.ttf in Resources */,
+				4A57590C93294542A63A14DB /* LufgaLightItalic.ttf in Resources */,
+				DF155DE6E7A74E5B86736FA4 /* LufgaMedium.ttf in Resources */,
+				0A43F0D0B6BC4581B59245D6 /* LufgaMediumItalic.ttf in Resources */,
+				CDF662067F574D848F412543 /* LufgaRegular.ttf in Resources */,
+				4D9734A2581C41B69FBD2FFD /* LufgaSemiBold.ttf in Resources */,
+				386C83FE85E5466EA1CDD101 /* LufgaSemiBoldItalic.ttf in Resources */,
+				436E942547BB439F80A95324 /* LufgaThin.ttf in Resources */,
+				A889360B0EDB43B79DB4A038 /* LufgaThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,24 +264,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BurjX/Pods-BurjX-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BurjX/Pods-BurjX-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BurjX/Pods-BurjX-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		71274EB8EEC58ABF56D8309B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,7 +286,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		9100E012AB06B64BF0A1E632 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,6 +301,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BurjX/Pods-BurjX-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95B26CF8E524D8FD4C4DD828 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BurjX/Pods-BurjX-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BurjX/Pods-BurjX-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BurjX/Pods-BurjX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -336,7 +336,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-BurjX.debug.xcconfig */;
+			baseConfigurationReference = 31E9FF208F21086BD80A3CFA /* Pods-BurjX.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -364,7 +364,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-BurjX.release.xcconfig */;
+			baseConfigurationReference = DBC2E870D21D6DB94FBCEF1C /* Pods-BurjX.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

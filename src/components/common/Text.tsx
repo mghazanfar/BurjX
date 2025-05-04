@@ -28,5 +28,6 @@ export const Text: React.FC<TextProps> = ({
 const styles = StyleSheet.create({
   base: {
     color: '#000000',
+    // fontFamily: 'LufgaRegular',
   },
 });

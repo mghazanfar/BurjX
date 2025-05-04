@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {
   View,
-  Text,
   TouchableOpacity,
   ScrollView,
   ActivityIndicator,
@@ -11,6 +10,7 @@ import {CryptoCard} from '../crypto-card';
 import {useFeaturedData} from '../../../../hooks/useFeaturedData';
 import {FLAG_ICON, ROCKET_ICON, STAR_ICON} from '../../../../constants/icons';
 import {CoinPrice} from '../../../../api/coinGecko';
+import {Text} from '../../../common/Text';
 
 type TabType = 'featured' | 'gainers' | 'losers';
 

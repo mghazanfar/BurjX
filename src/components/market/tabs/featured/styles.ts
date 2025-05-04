@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   },
   tab: {
     alignItems: 'center',
+    minWidth: 163,
   },
   activeTab: {
     // You can add styles for the active tab if needed

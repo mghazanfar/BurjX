@@ -1,6 +1,5 @@
 import {
   View,
-  Text,
   SafeAreaView,
   TouchableOpacity,
   StyleSheet,
@@ -8,7 +7,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import image from '../../../assets/BG.png';
+import {Text} from '../../components/common/Text';
 
 export const CoinDetails = () => {
   const navigation = useNavigation();
@@ -16,7 +15,7 @@ export const CoinDetails = () => {
   return (
     <View style={{paddingBottom: 67, flex: 1, backgroundColor: 'black'}}>
       <ImageBackground
-        source={image}
+        source={require('../../../assets/BG.png')}
         style={styles.backgroundImage}
         resizeMode="cover">
         <View style={styles.parentContainer}>

@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import {LineChart} from 'react-native-chart-kit';
+import {Text} from '../../../common/Text';
 
 interface CryptoCardProps {
   symbol: string; // e.g., "BTC"
