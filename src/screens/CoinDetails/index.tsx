@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {Text} from '../../components/common/Text';
+import {CancleStickChart} from '../../components/coin-details/candle-light-chart';
 
 export const CoinDetails = () => {
   const navigation = useNavigation();
@@ -49,6 +50,7 @@ export const CoinDetails = () => {
 
             {/* Chart placeholder */}
             <View style={styles.chartPlaceholder}>
+              <CancleStickChart />
               {/* Chart will be implemented later */}
               <View style={styles.priceIndicator}>
                 <Text style={styles.indicatorText}>$ 148k</Text>
