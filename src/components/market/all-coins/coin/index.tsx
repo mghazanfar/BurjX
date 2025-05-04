@@ -20,7 +20,6 @@ export const CoinCard = ({
   priceChangePercent,
   chartData,
   iconUrl,
-  color = '#cdff00', // Default to neon green if no color provided
 }: CoinCardProps) => {
   const navigation = useNavigation<any>();
   // Format price with commas and 2 decimal places
@@ -31,6 +30,7 @@ export const CoinCard = ({
 
   // Determine if price change is positive or negative
   const isPositive = priceChangePercent >= 0;
+  const chartColor = isPositive ? '#CDFF00' : '#FF3440';
 
   return (
     <TouchableOpacity
@@ -57,7 +57,7 @@ export const CoinCard = ({
           <Text
             style={[
               styles.percentText,
-              {color: isPositive ? color : '#FF4D4D'},
+              {color: isPositive ? '#CDFF00' : '#FF3440'},
             ]}>
             {isPositive ? '+ ' : '- '}
             {Math.abs(priceChangePercent).toFixed(2)} %
@@ -96,7 +96,7 @@ export const CoinCard = ({
                 backgroundGradientFrom: '#171717',
                 backgroundGradientTo: '#171717',
                 decimalPlaces: 0,
-                color: () => color,
+                color: () => chartColor,
                 style: {
                   borderRadius: 16,
                 },
@@ -105,6 +105,7 @@ export const CoinCard = ({
                 },
                 fillShadowGradient: 'transparent',
                 fillShadowGradientOpacity: 0,
+                strokeWidth: 1.5,
               }}
               bezier
               style={styles.chart}
@@ -147,6 +148,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 20,
     fontWeight: 'bold',
+    textTransform: 'uppercase',
   },
   name: {
     color: '#AAAAAA',
