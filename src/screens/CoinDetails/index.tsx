@@ -15,6 +15,17 @@ import {useCoinData} from '../../hooks/useCoinData';
 import {useEffect, useState} from 'react';
 import React from 'react';
 
+interface CoinDetailsRouteParams {
+  productId: string;
+  isPositive: boolean;
+  chartColor: string;
+  icon: string;
+  name: string;
+  symbol: string;
+  percentageText: string;
+  formattedPrice: string;
+}
+
 const TIME_RANGES = [
   {label: '1D', value: '1'},
   {label: '1W', value: '7'},
@@ -35,7 +46,7 @@ export const CoinDetails = () => {
     symbol,
     percentageText,
     formattedPrice,
-  } = route.params as any;
+  } = route.params as CoinDetailsRouteParams;
   const {data, loading, fetchCoin} = useCoinData();
   const [selectedTimeRange, setSelectedTimeRange] = useState<string>('1');
 
