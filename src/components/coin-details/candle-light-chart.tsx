@@ -4,10 +4,15 @@ import {
   VictoryTheme,
   VictoryAxis,
 } from 'victory-native';
+import {CandlestickData} from '../../hooks/useCoinData';
 
-export const CancleStickChart = () => {
+interface CancleStickChartProps {
+  data: CandlestickData[];
+}
+
+export const CancleStickChart = ({data}: CancleStickChartProps) => {
   return (
-    <VictoryChart domainPadding={{x: 25}} theme={VictoryTheme.clean}>
+    <VictoryChart domainPadding={{x: 25}} theme={VictoryTheme.clean} animate>
       <VictoryAxis
         style={{
           axis: {stroke: 'transparent'},
@@ -31,49 +36,13 @@ export const CancleStickChart = () => {
         wickStrokeWidth={1}
         style={{
           data: {
-            fill: d => (d.close >= d.open ? '#CDFF00' : '#FF3440'),
-            stroke: d => (d.close >= d.open ? '#CDFF00' : '#FF3440'),
+            fill: '#CDFF00',
+            stroke: '#CDFF00',
             strokeWidth: 0,
             borderRadius: 16,
           },
         }}
-        data={[
-          {
-            x: '3/1/23',
-            open: 5,
-            close: 10,
-            high: 15,
-            low: 0,
-          },
-          {
-            x: '3/2/23',
-            open: 10,
-            close: 15,
-            high: 20,
-            low: 5,
-          },
-          {
-            x: '3/3/23',
-            open: 15,
-            close: 20,
-            high: 22,
-            low: 10,
-          },
-          {
-            x: '3/4/23',
-            open: 20,
-            close: 10,
-            high: 25,
-            low: 7,
-          },
-          {
-            x: '3/5/23',
-            open: 10,
-            close: 8,
-            high: 15,
-            low: 5,
-          },
-        ]}
+        data={data}
       />
     </VictoryChart>
   );

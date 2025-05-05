@@ -5,13 +5,32 @@ import {
   StyleSheet,
   StatusBar,
   ImageBackground,
+  ActivityIndicator,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import {Text} from '../../components/common/Text';
 import {CancleStickChart} from '../../components/coin-details/candle-light-chart';
+import {useCoinData} from '../../hooks/useCoinData';
+import {useEffect, useState} from 'react';
+import React from 'react';
+
+const TIME_RANGES = [
+  {label: '1D', value: '1'},
+  {label: '1W', value: '7'},
+  {label: '1M', value: '30'},
+  {label: '1Y', value: '365'},
+  {label: 'ALL', value: 'max'},
+] as const;
 
 export const CoinDetails = () => {
   const navigation = useNavigation();
+  const route = useRoute();
+  const {productId} = route.params as {productId: string};
+  const {data, loading, error, fetchCoin} = useCoinData();
+  const [selectedTimeRange, setSelectedTimeRange] = useState<string>('1');
+  useEffect(() => {
+    fetchCoin(productId, selectedTimeRange as '1' | '7' | '30' | '365' | 'max');
+  }, [productId, selectedTimeRange]);
 
   return (
     <View style={{paddingBottom: 67, flex: 1, backgroundColor: 'black'}}>
@@ -50,43 +69,40 @@ export const CoinDetails = () => {
 
             {/* Chart placeholder */}
             <View style={styles.chartPlaceholder}>
-              <CancleStickChart />
-              {/* Chart will be implemented later */}
-              <View style={styles.priceIndicator}>
-                <Text style={styles.indicatorText}>$ 148k</Text>
-              </View>
+              {loading ? (
+                <View style={styles.loadingContainer}>
+                  <ActivityIndicator size="large" color="#CCFF00" />
+                </View>
+              ) : (
+                <React.Fragment>
+                  <CancleStickChart data={data} />
+                  <View style={styles.priceIndicator}>
+                    <Text style={styles.indicatorText}>$ 148k</Text>
+                  </View>
+                </React.Fragment>
+              )}
             </View>
 
             {/* Time period selector */}
             <View style={styles.timeSelector}>
-              <TouchableOpacity
-                style={[styles.timeButton, styles.activeTimeButton]}>
-                <Text
-                  style={[styles.timeButtonText, styles.activeTimeButtonText]}>
-                  1H
-                </Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.timeButton}>
-                <Text style={styles.timeButtonText}>1D</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.timeButton}>
-                <Text style={styles.timeButtonText}>1W</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.timeButton}>
-                <Text style={styles.timeButtonText}>1M</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.timeButton}>
-                <Text style={styles.timeButtonText}>1Y</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.timeButton}>
-                <Text style={styles.timeButtonText}>ALL</Text>
-              </TouchableOpacity>
-
+              {TIME_RANGES.map(({label, value}) => (
+                <TouchableOpacity
+                  key={value}
+                  style={[
+                    styles.timeButton,
+                    selectedTimeRange === value && styles.activeTimeButton,
+                  ]}
+                  onPress={() => setSelectedTimeRange(value)}>
+                  <Text
+                    style={[
+                      styles.timeButtonText,
+                      selectedTimeRange === value &&
+                        styles.activeTimeButtonText,
+                    ]}>
+                    {label}
+                  </Text>
+                </TouchableOpacity>
+              ))}
               <TouchableOpacity style={styles.expandButton}>
                 <Text style={styles.expandButtonText}>↗</Text>
               </TouchableOpacity>
@@ -231,5 +247,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 3,
     opacity: 0.3,
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
