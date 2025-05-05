@@ -37,7 +37,7 @@ export const CancleStickChart = ({data}: CancleStickChartProps) => {
           dependentAxis
           orientation="right"
           style={{
-            axis: {stroke: 'rgba(255, 255, 255, 0.2)'},
+            axis: {stroke: 'transparent'},
             grid: {
               stroke: 'rgba(255, 255, 255, 0.1)',
               strokeWidth: 0.5,
