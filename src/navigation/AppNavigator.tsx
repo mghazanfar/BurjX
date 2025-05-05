@@ -17,7 +17,7 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="BiometricSetup"
+        initialRouteName="Markets"
         screenOptions={{
           headerShown: false,
         }}>
