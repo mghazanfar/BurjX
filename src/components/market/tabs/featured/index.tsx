@@ -66,7 +66,7 @@ const Featured = () => {
   return (
     <View>
       {/* Tabs */}
-      <View style={styles.tabsContainer}>
+      <ScrollView contentContainerStyle={styles.tabsContainer} horizontal>
         <TouchableOpacity
           style={[styles.tab, activeTab === 'featured' && styles.activeTab]}
           onPress={() => setActiveTab('featured')}>
@@ -102,7 +102,7 @@ const Featured = () => {
             ]}
           />
         </TouchableOpacity>
-      </View>
+      </ScrollView>
 
       {/* Tab Content */}
       <ScrollView contentContainerStyle={styles.scrollContainer}>

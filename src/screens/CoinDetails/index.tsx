@@ -35,7 +35,7 @@ export const CoinDetails = () => {
     symbol,
     percentageText,
     formattedPrice,
-  } = route.params as {productId: string};
+  } = route.params as any;
   const {data, loading, fetchCoin} = useCoinData();
   const [selectedTimeRange, setSelectedTimeRange] = useState<string>('1');
 

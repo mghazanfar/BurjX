@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
   },
   scrollContainer: {
     paddingVertical: 10,
+    minHeight: 180,
   },
   cardsContainer: {
     flexDirection: 'row',
