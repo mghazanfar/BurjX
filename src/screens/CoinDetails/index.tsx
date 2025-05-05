@@ -74,12 +74,7 @@ export const CoinDetails = () => {
                   <ActivityIndicator size="large" color="#CCFF00" />
                 </View>
               ) : (
-                <React.Fragment>
-                  <CancleStickChart data={data} />
-                  <View style={styles.priceIndicator}>
-                    <Text style={styles.indicatorText}>$ 148k</Text>
-                  </View>
-                </React.Fragment>
+                <CancleStickChart data={data} />
               )}
             </View>
 
