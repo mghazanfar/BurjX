@@ -13,7 +13,12 @@ interface CancleStickChartProps {
 
 export const CancleStickChart = ({data}: CancleStickChartProps) => {
   const formatYAxis = (value: number) => {
-    return `$${Math.round(value / 1000)}k`;
+    const valueInK = value / 1000;
+    if (valueInK >= 1) {
+      return `$${Math.round(valueInK)}k`;
+    } else {
+      return `$${value.toFixed(4)}`;
+    }
   };
 
   return (
