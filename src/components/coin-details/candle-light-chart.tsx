@@ -5,26 +5,19 @@ import {
   VictoryAxis,
 } from 'victory-native';
 import {CandlestickData} from '../../hooks/useCoinData';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
 interface CancleStickChartProps {
   data: CandlestickData[];
 }
 
 export const CancleStickChart = ({data}: CancleStickChartProps) => {
-  // Find the highest value in the data
-  const highestValue = Math.max(...data.map(d => d.high));
-  const formattedPrice = `$${Math.round(highestValue / 1000)}k`;
-
   const formatYAxis = (value: number) => {
     return `$${Math.round(value / 1000)}k`;
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.priceIndicator}>
-        <Text style={styles.indicatorText}>{formattedPrice}</Text>
-      </View>
       <VictoryChart domainPadding={{x: 25}} theme={VictoryTheme.clean}>
         <VictoryAxis
           style={{
@@ -52,13 +45,14 @@ export const CancleStickChart = ({data}: CancleStickChartProps) => {
           wickStrokeWidth={1}
           style={{
             data: {
-              fill: '#CDFF00',
-              stroke: '#CDFF00',
+              fill: (d: any) => (d.close >= d.open ? '#CDFF00' : '#FF3440'),
+              stroke: (d: any) => (d.close >= d.open ? '#CDFF00' : '#FF3440'),
               strokeWidth: 0,
               borderRadius: 16,
             },
           }}
           data={data}
+          padding={{left: 20, right: 20}}
         />
       </VictoryChart>
     </View>
