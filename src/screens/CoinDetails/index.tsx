@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {Text} from '../../components/common/Text';
-import {CancleStickChart} from '../../components/coin-details/candle-light-chart';
+import {CandleStickChart} from '../../components/coin-details/candle-light-chart';
 import {useCoinData} from '../../hooks/useCoinData';
 import {useEffect, useState} from 'react';
 import React from 'react';
@@ -105,7 +105,7 @@ export const CoinDetails = () => {
                   <ActivityIndicator size="large" color="#CCFF00" />
                 </View>
               ) : (
-                <CancleStickChart data={data} />
+                <CandleStickChart data={data} />
               )}
             </View>
 

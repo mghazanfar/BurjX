@@ -3,18 +3,17 @@ import {
   VictoryChart,
   VictoryTheme,
   VictoryAxis,
-  VictoryLabel,
   Text,
 } from 'victory-native';
 import {CandlestickData} from '../../hooks/useCoinData';
-import {View, StyleSheet} from 'react-native';
-import {G, Rect, Text as SVGText} from 'react-native-svg';
+import {View, StyleSheet, Dimensions} from 'react-native';
+import {G, Rect} from 'react-native-svg';
 
-interface CancleStickChartProps {
+interface CandleStickChartProps {
   data: CandlestickData[];
 }
 
-export const CancleStickChart = ({data}: CancleStickChartProps) => {
+export const CandleStickChart = ({data}: CandleStickChartProps) => {
   const formatYAxis = (value: number) => {
     const valueInK = value / 1000;
     if (valueInK >= 1) {
@@ -26,14 +25,17 @@ export const CancleStickChart = ({data}: CancleStickChartProps) => {
 
   return (
     <View style={styles.container}>
-      <VictoryChart theme={VictoryTheme.clean} domainPadding={{x: 25}}>
-        <VictoryAxis
+      <VictoryChart
+        theme={VictoryTheme.clean}
+        domainPadding={{x: 25}}
+        style={{}}>
+        {/* <VictoryAxis
           style={{
             axis: {stroke: 'transparent'},
             ticks: {stroke: 'transparent'},
             tickLabels: {fill: 'transparent'},
           }}
-        />
+        /> */}
         <VictoryAxis
           dependentAxis
           orientation="right"
