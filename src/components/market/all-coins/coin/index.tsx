@@ -12,6 +12,7 @@ interface CoinCardProps {
   chartData: number[]; // Array of price points for the chart
   iconUrl: string; // URL to the coin's icon
   color?: string; // Optional custom color for the chart
+  productId: number; // Coin's product ID for navigation
 }
 
 export const CoinCard = ({
@@ -21,6 +22,7 @@ export const CoinCard = ({
   priceChangePercent,
   chartData,
   iconUrl,
+  productId,
 }: CoinCardProps) => {
   const navigation = useNavigation<any>();
   // Format price with commas and 2 decimal places
@@ -36,7 +38,9 @@ export const CoinCard = ({
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => navigation.navigate('CoinDetails')}>
+      onPress={() =>
+        navigation.navigate('CoinDetails', {productId: productId.toString()})
+      }>
       {/* Coin Info */}
       <View style={styles.coinInfoContainer}>
         <View style={styles.headerContainer}>

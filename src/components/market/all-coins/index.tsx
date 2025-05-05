@@ -74,6 +74,7 @@ export const AllCoins = () => {
                 priceChangePercent={coin.priceChangePercentage24h}
                 chartData={coin.sparkline}
                 iconUrl={coin.image}
+                productId={coin.productId}
               />
             ))}
             {loading && (

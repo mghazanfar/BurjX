@@ -17,7 +17,7 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="CoinDetails"
+        initialRouteName="Markets"
         screenOptions={{
           headerShown: false,
         }}>
