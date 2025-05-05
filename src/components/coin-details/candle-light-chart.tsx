@@ -25,17 +25,14 @@ export const CandleStickChart = ({data}: CandleStickChartProps) => {
 
   return (
     <View style={styles.container}>
-      <VictoryChart
-        theme={VictoryTheme.clean}
-        domainPadding={{x: 25}}
-        style={{}}>
-        {/* <VictoryAxis
+      <VictoryChart theme={VictoryTheme.clean} domainPadding={{x: 25}}>
+        <VictoryAxis
           style={{
             axis: {stroke: 'transparent'},
             ticks: {stroke: 'transparent'},
             tickLabels: {fill: 'transparent'},
           }}
-        /> */}
+        />
         <VictoryAxis
           dependentAxis
           orientation="right"
