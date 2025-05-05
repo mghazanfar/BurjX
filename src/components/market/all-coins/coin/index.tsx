@@ -34,12 +34,22 @@ export const CoinCard = ({
   // Determine if price change is positive or negative
   const isPositive = priceChangePercent >= 0;
   const chartColor = isPositive ? '#CDFF00' : '#FF3440';
+  const percentageText = Math.abs(priceChangePercent).toFixed(2);
 
   return (
     <TouchableOpacity
       style={styles.container}
       onPress={() =>
-        navigation.navigate('CoinDetails', {productId: productId.toString()})
+        navigation.navigate('CoinDetails', {
+          productId: productId.toString(),
+          isPositive,
+          chartColor,
+          icon: iconUrl,
+          name,
+          symbol: symbol?.toUpperCase(),
+          percentageText,
+          formattedPrice,
+        })
       }>
       {/* Coin Info */}
       <View style={styles.coinInfoContainer}>
@@ -65,7 +75,7 @@ export const CoinCard = ({
               {color: isPositive ? '#CDFF00' : '#FF3440'},
             ]}>
             {isPositive ? '+ ' : '- '}
-            {Math.abs(priceChangePercent).toFixed(2)} %
+            {percentageText} %
           </Text>
         </View>
       </View>

@@ -18,28 +18,30 @@ export const useCoinData = () => {
   const [error, setError] = useState<string | null>(null);
 
   const fetchData = async (productId?: string, days?: TimeRange) => {
-    try {
-      setLoading(true);
-      const response = await axios.get(
-        `https://coingeko.burjx.com/coin-ohlc?productId=${productId}&days=${days}`,
-      );
+    if (productId) {
+      try {
+        setLoading(true);
+        const response = await axios.get(
+          `https://coingeko.burjx.com/coin-ohlc?productId=${productId}&days=${days}`,
+        );
 
-      // Transform the API response into the format expected by VictoryCandlestick
-      const formattedData = response.data.map((item: any) => ({
-        x: format(new Date(item.date), 'M/d/yy'),
-        open: item.usd.open,
-        high: item.usd.high,
-        low: item.usd.low,
-        close: item.usd.close,
-      }));
+        // Transform the API response into the format expected by VictoryCandlestick
+        const formattedData = response.data.map((item: any) => ({
+          x: format(new Date(item.date), 'M/d/yy'),
+          open: item.usd.open,
+          high: item.usd.high,
+          low: item.usd.low,
+          close: item.usd.close,
+        }));
 
-      setData(formattedData);
-      setError(null);
-    } catch (err) {
-      setError('Failed to fetch candlestick data');
-      console.error('Error fetching candlestick data:', err);
-    } finally {
-      setLoading(false);
+        setData(formattedData);
+        setError(null);
+      } catch (err) {
+        setError('Failed to fetch candlestick data');
+        console.error('Error fetching candlestick data:', err);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 

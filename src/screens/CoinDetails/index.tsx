@@ -6,6 +6,7 @@ import {
   StatusBar,
   ImageBackground,
   ActivityIndicator,
+  Image,
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {Text} from '../../components/common/Text';
@@ -25,9 +26,19 @@ const TIME_RANGES = [
 export const CoinDetails = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const {productId} = route.params as {productId: string};
-  const {data, loading, error, fetchCoin} = useCoinData();
+  const {
+    productId,
+    isPositive,
+    chartColor,
+    icon,
+    name,
+    symbol,
+    percentageText,
+    formattedPrice,
+  } = route.params as {productId: string};
+  const {data, loading, fetchCoin} = useCoinData();
   const [selectedTimeRange, setSelectedTimeRange] = useState<string>('1');
+
   useEffect(() => {
     fetchCoin(productId, selectedTimeRange as '1' | '7' | '30' | '365' | 'max');
   }, [productId, selectedTimeRange]);
@@ -53,17 +64,26 @@ export const CoinDetails = () => {
               <View style={styles.titleContainer}>
                 {/* Bitcoin logo rendered as a simple component */}
                 <View style={styles.bitcoinLogo}>
-                  <Text style={styles.bitcoinSymbol}>₿</Text>
+                  <Image
+                    source={{uri: icon}}
+                    width={24}
+                    height={24}
+                    style={{borderRadius: 12}}
+                  />
                 </View>
-                <Text style={styles.title}>Bitcoin (BTC)</Text>
+                <Text style={styles.title}>
+                  {name} ({symbol})
+                </Text>
               </View>
             </View>
 
             {/* Price information */}
             <View style={styles.priceContainer}>
-              <Text style={styles.priceText}>$ 148,385.52</Text>
+              <Text style={styles.priceText}>$ {formattedPrice}</Text>
               <View style={styles.percentageContainer}>
-                <Text style={styles.percentageText}>+ 5.42 %</Text>
+                <Text style={[styles.percentageText, {color: chartColor}]}>
+                  {isPositive ? '+' : '-'} {percentageText} %
+                </Text>
               </View>
             </View>
 
@@ -147,7 +167,6 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#F7931A',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 10,
